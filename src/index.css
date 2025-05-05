@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,74 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom styles for UnifiedHorizon presentation */
+.section-separator {
+  @apply my-20 w-full flex items-center justify-center;
+}
+
+.section-separator::before,
+.section-separator::after {
+  content: '';
+  @apply h-px bg-silver/50 flex-grow;
+}
+
+.section-separator::before {
+  @apply mr-8;
+}
+
+.section-separator::after {
+  @apply ml-8;
+}
+
+.section-separator span {
+  @apply font-serif text-navy text-xl;
+}
+
+.reveal-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reveal-animation.active {
+  @apply animate-slide-in;
+}
+
+.service-card {
+  @apply p-6 rounded-md border border-silver/20 transition-all duration-300;
+}
+
+.service-card:hover {
+  @apply shadow-lg border-silver/50 -translate-y-1;
+}
+
+table.comparison-table {
+  @apply w-full border-collapse;
+}
+
+table.comparison-table th {
+  @apply font-serif text-left p-3 bg-navy text-white;
+}
+
+table.comparison-table td {
+  @apply p-3 border-b border-silver/20;
+}
+
+table.comparison-table tr:nth-child(even) {
+  @apply bg-silver/10;
+}
+
+.feature-icon {
+  @apply h-12 w-12 text-navy mb-4;
+}
+
+.cta-gradient {
+  background: linear-gradient(to right, rgba(26,31,44,0.9), rgba(26,31,44,0.7));
 }
