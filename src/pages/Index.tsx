@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import SectionHeading from '../components/SectionHeading';
@@ -242,15 +241,22 @@ const Index = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
             <div>
               <h4 className="font-serif text-xl mb-2">Visit Us</h4>
-              <p className="text-white/80">1100 Avenue of Legal Excellence<br/>New York, NY 10022</p>
+              <p className="text-white/80">Sector - 142, Noida, Uttar Pradesh 201305</p>
             </div>
             <div>
               <h4 className="font-serif text-xl mb-2">Contact Us</h4>
-              <p className="text-white/80">info@unifiedhorizon.com<br/>+1 (212) 555-0123</p>
+              <p className="text-white/80">connect@unifiedhorizon.org<br/>+91 8868823468</p>
             </div>
             <div>
               <h4 className="font-serif text-xl mb-2">Follow Us</h4>
-              <p className="text-white/80">LinkedIn • Twitter • Instagram</p>
+              <p className="text-white/80">
+                <a href="https://www.linkedin.com/company/unifiedhorizon/posts/?feedView=all" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   className="hover:text-white hover:underline">
+                  LinkedIn
+                </a>
+              </p>
             </div>
           </div>
         </div>
