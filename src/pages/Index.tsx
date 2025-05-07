@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import SectionHeading from '../components/SectionHeading';
@@ -230,11 +231,11 @@ const Index = () => {
         <div className="container mx-auto relative z-10">
           <SectionHeading 
             title="Transform Your Legal Practice"
-            subtitle="Schedule a consultation with our team to discover how UnifiedHorizon can elevate your law firm."
+            subtitle="Connect with our team to discover how UnifiedHorizon can elevate your law firm."
             className="text-white"
           />
           
-          <div className="bg-white rounded-lg p-8 shadow-lg text-navy">
+          <div className="bg-white rounded-lg p-8 shadow-lg text-navy max-w-2xl mx-auto">
             <ContactForm />
           </div>
           
