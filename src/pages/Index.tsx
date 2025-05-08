@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import SectionHeading from '../components/SectionHeading';
@@ -8,6 +7,7 @@ import ChallengeCard from '../components/ChallengeCard';
 import FutureCard from '../components/FutureCard';
 import CompetitiveAdvantage from '../components/CompetitiveAdvantage';
 import ServiceVerticals from '../components/ServiceVerticals';
+import VideoEmbed from '../components/VideoEmbed';
 import ThoughtLeadership from '../components/ThoughtLeadership';
 import ContactForm from '../components/ContactForm';
 import { Button } from '@/components/ui/button';
@@ -206,6 +206,23 @@ const Index = () => {
           />
           
           <ServiceVerticals />
+        </div>
+      </section>
+      
+      <SectionSeparator />
+      
+      {/* Video Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <SectionHeading 
+            title="See Our Approach in Action"
+            subtitle="Watch how we transform legal practices with our innovative solutions"
+          />
+          
+          <VideoEmbed 
+            src="https://youtube.com/shorts/bm6uywFp9wE"
+            title="UnifiedHorizon Approach"
+          />
         </div>
       </section>
       
