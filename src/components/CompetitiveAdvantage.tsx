@@ -15,20 +15,9 @@ const CompetitiveAdvantage: React.FC = () => {
     'Legal Networking & Growth Opportunities'
   ];
 
-  const competitors = [
-    'Legal League Consulting',
-    'Vahura',
-    'Yellow Wire Consulting',
-    'Legal Orbit'
-  ];
-
-  // This mapping defines which competitors have which features
-  // true = has feature, false = doesn't have feature
-  const competitorFeatures = {
-    'Legal League Consulting': [false, false, true, false, true, true, false, false],
-    'Vahura': [false, false, false, false, true, true, true, false],
-    'Yellow Wire Consulting': [false, true, true, false, false, false, true, false],
-    'Legal Orbit': [true, false, false, true, false, false, false, true],
+  // This mapping defines which features are typically available in other companies
+  const otherCompaniesFeatures = {
+    'Other Companies': [false, false, false, false, true, true, false, false]
   };
 
   return (
@@ -37,11 +26,9 @@ const CompetitiveAdvantage: React.FC = () => {
         <table className="comparison-table">
           <thead>
             <tr>
-              <th className="w-1/4">Features / Services</th>
-              <th className="w-1/6 bg-gold text-navy text-center">UnifiedHorizon</th>
-              {competitors.map((competitor, index) => (
-                <th key={index} className="w-1/6 text-center">{competitor}</th>
-              ))}
+              <th className="w-1/2">Features / Services</th>
+              <th className="w-1/4 bg-gold text-navy text-center">UnifiedHorizon</th>
+              <th className="w-1/4 text-center">Other Companies</th>
             </tr>
           </thead>
           <tbody>
@@ -51,19 +38,13 @@ const CompetitiveAdvantage: React.FC = () => {
                 <td className="text-center">
                   <Check className="mx-auto text-gold h-5 w-5" />
                 </td>
-                {competitors.map((competitor, competitorIndex) => {
-                  const hasFeature = competitorFeatures[competitor as keyof typeof competitorFeatures][featureIndex];
-                  
-                  return (
-                    <td key={competitorIndex} className="text-center">
-                      {hasFeature ? (
-                        <Check className="mx-auto text-green-600 h-5 w-5" />
-                      ) : (
-                        <X className="mx-auto text-red-400 h-5 w-5" />
-                      )}
-                    </td>
-                  );
-                })}
+                <td className="text-center">
+                  {otherCompaniesFeatures['Other Companies'][featureIndex] ? (
+                    <Check className="mx-auto text-green-600 h-5 w-5" />
+                  ) : (
+                    <X className="mx-auto text-red-400 h-5 w-5" />
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>
