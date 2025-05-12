@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import SectionHeading from '../components/SectionHeading';
@@ -220,7 +221,7 @@ const Index = () => {
           />
           
           <VideoEmbed 
-            src="https://youtube.com/shorts/bm6uywFp9wE"
+            src="https://youtube.com/shorts/H0uo1Hoz6qo?feature=share"
             title="UnifiedHorizon Approach"
           />
         </div>
