@@ -34,8 +34,8 @@ const VideoEmbed: React.FC<VideoEmbedProps> = ({
 
   return (
     <RevealOnScroll>
-      <div className="video-embed my-10 aspect-video flex justify-center">
-        <div className="relative w-full max-w-3xl aspect-[9/16] md:aspect-video">
+      <div className="video-embed my-10 max-w-md mx-auto">
+        <div className="relative w-full aspect-[9/16]">
           <iframe
             src={embedUrl}
             title={title}
