@@ -2,6 +2,14 @@
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import RevealOnScroll from './RevealOnScroll';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const CompetitiveAdvantage: React.FC = () => {
   const features = [
@@ -23,32 +31,32 @@ const CompetitiveAdvantage: React.FC = () => {
   return (
     <RevealOnScroll>
       <div className="overflow-x-auto">
-        <table className="comparison-table">
-          <thead>
-            <tr>
-              <th className="w-1/2">Features / Services</th>
-              <th className="w-1/4 bg-gold text-navy text-center">UnifiedHorizon</th>
-              <th className="w-1/4 text-center">Other Companies</th>
-            </tr>
-          </thead>
-          <tbody>
+        <Table className="w-full border-collapse">
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-1/2">Features / Services</TableHead>
+              <TableHead className="w-1/4 bg-gold text-navy text-center">UnifiedHorizon</TableHead>
+              <TableHead className="w-1/4 text-center">Other Companies</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
             {features.map((feature, featureIndex) => (
-              <tr key={featureIndex}>
-                <td className="font-medium">{feature}</td>
-                <td className="text-center">
+              <TableRow key={featureIndex}>
+                <TableCell className="font-medium">{feature}</TableCell>
+                <TableCell className="text-center">
                   <Check className="mx-auto text-gold h-5 w-5" />
-                </td>
-                <td className="text-center">
+                </TableCell>
+                <TableCell className="text-center">
                   {otherCompaniesFeatures['Other Companies'][featureIndex] ? (
                     <Check className="mx-auto text-green-600 h-5 w-5" />
                   ) : (
                     <X className="mx-auto text-red-400 h-5 w-5" />
                   )}
-                </td>
-              </tr>
+                </TableCell>
+              </TableRow>
             ))}
-          </tbody>
-        </table>
+          </TableBody>
+        </Table>
       </div>
     </RevealOnScroll>
   );
