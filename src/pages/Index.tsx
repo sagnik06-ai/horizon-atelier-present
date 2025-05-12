@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import SectionHeading from '../components/SectionHeading';
@@ -219,12 +220,10 @@ const Index = () => {
             subtitle="Watch how we transform legal practices with our innovative solutions"
           />
           
-          <div className="flex justify-center">
-            <VideoEmbed 
-              src="https://youtube.com/shorts/H0uo1Hoz6qo?feature=share"
-              title="UnifiedHorizon Approach"
-            />
-          </div>
+          <VideoEmbed 
+            src="https://youtube.com/shorts/H0uo1Hoz6qo?feature=share"
+            title="UnifiedHorizon Approach"
+          />
         </div>
       </section>
       
